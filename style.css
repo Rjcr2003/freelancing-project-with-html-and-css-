@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@800&family=Ubuntu:wght@300;500;700&display=swap');
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    border: 1px solid red;
+    height: 800vh;
+
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    margin:0px;
+    
+}
+.navbar-left{
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    
+
+}
+.navbar-right{
+    justify-content: center;
+    padding: 50px;
+    margin: 20px;
+
+    
+}
+.logo{
+    height: 100px;
+    padding: 10px;
+}
+.a{
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    padding: 30px;
+    font-style: italic;
+    font-weight: bold;
+    border: 2px;
+    
+}
+.head{
+    margin: 10pxs;
+}
+.body-left{
+    padding: 100px;
+    color: white;
+    text-transform: capitalize;
+}
+.body-right{
+    justify-content: left;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+
+}
+.body-text{
+    font-family: 'Noto Sans Telugu', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    height: 50vh;
+    
+
+}
+.body-img{
+    margin-right: 200px;
+    text-align: left;
+    padding: 20px;
+    size: 100vh;
+    height: 50vh;
+}
+.body-img{
+    margin:0px ;
+}
