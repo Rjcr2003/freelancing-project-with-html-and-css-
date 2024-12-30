@@ -8,7 +8,7 @@
     justify-content: space-between;
     background-color: black;
     border: 1px solid red;
-    height: 100vh;
+    height: 85vh;
 
 }
 .navbar{
@@ -20,7 +20,7 @@
     
 }
 .navbar-left{
-    padding: 20px;
+    padding: 10px;
 
     display: flex;
     flex-direction: row;
@@ -31,7 +31,7 @@
 }
 .navbar-right{
     justify-content: center;
-    padding: 50px;
+    padding: 10px;
     margin: 20px;
 
     
@@ -49,16 +49,26 @@
     border: 2px;
     
 }
+.a:active{
+   color: red;
+}
+.a:hover{
+    background-color: hsl(138, 67%, 42%);
+    font-size: 30px;
+}
 .head{
     margin: 10pxs;
 }
 .body-left{
-    padding: 100px;
+    margin-left: 10px;
+    height: 60vh;
+    padding: 20px;
     color: white;
     text-transform: capitalize;
 
 }
 .body-right{
+    height: 60vh;
     justify-content: left;
     margin-top: 20px;
     margin-right: 20px;
