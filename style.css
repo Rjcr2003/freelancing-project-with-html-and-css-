@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@800&family=Ubuntu:wght@300;500;700&display=swap');
 
 .main{
-    display: flex;
+    display:flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: black;
     border: 1px solid red;
-    height: 800vh;
+    height: 100vh;
 
 }
 .navbar{
@@ -56,12 +56,14 @@
     padding: 100px;
     color: white;
     text-transform: capitalize;
+
 }
 .body-right{
     justify-content: left;
     margin-top: 20px;
     margin-right: 20px;
     text-align: center;
+    
 
 }
 .body-text{
@@ -81,4 +83,8 @@
 }
 .body-img{
     margin:0px ;
+}
+body{
+    margin: auto;
+    background-size: cover;
 }
