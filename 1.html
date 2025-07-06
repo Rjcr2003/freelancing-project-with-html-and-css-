@@ -1,53 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aditya astrology</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditya Astrology</title>
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  // Highlight the active page in navbar
+  const links = document.querySelectorAll('.a');
+  const currentPage = window.location.href;
+
+  links.forEach(link => {
+    if (currentPage.includes(link.getAttribute('href'))) {
+      link.style.color = 'crimson';
+      link.style.borderBottom = '2px solid crimson';
+    }
+  });
+
+  // Scroll to top button logic
+  const scrollBtn = document.createElement('button');
+  scrollBtn.textContent = '↑ Top';
+  scrollBtn.style.position = 'fixed';
+  scrollBtn.style.bottom = '20px';
+  scrollBtn.style.right = '20px';
+  scrollBtn.style.padding = '10px 15px';
+  scrollBtn.style.borderRadius = '50%';
+  scrollBtn.style.border = 'none';
+  scrollBtn.style.backgroundColor = 'crimson';
+  scrollBtn.style.color = 'white';
+  scrollBtn.style.cursor = 'pointer';
+  scrollBtn.style.display = 'none';
+  scrollBtn.style.zIndex = '1000';
+  document.body.appendChild(scrollBtn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Click to copy phone number
+  const phone = document.querySelector('p strong');
+  if (phone) {
+    phone.style.cursor = 'pointer';
+    phone.setAttribute('title', 'Click to copy');
+
+    phone.addEventListener('click', () => {
+      const number = phone.innerText.replace(/[^\d+]/g, '');
+      navigator.clipboard.writeText(number).then(() => {
+        alert("Phone number copied: " + number);
+      });
+    });
+  }
+</script>
 <body>
-    <div class="navbar">
-        <div class="navbar-left">
-            <img class="logo" src="https://i.ibb.co/4prLbTD/channels4-profile.jpg" alt="logo">
-            <h1 class="head">aditya vastu jyothishalayam</h1>
-        </div>
-        <div class="navbar-right">
-            <a class="a" href="1.html">home</a>
-            <a class="a" href="2.html">contact us</a>
-            <a class="a" href="https://www.youtube.com/@adityateluguastrology">youtube</a>
-        </div>
-        </div>
-        <main>
-    <div class="main">
-        <section>
-        <div class="body-left">
-            <p class="body-text">30 years experience in astrology, vastu and all muhurtas.Research of thousands horoscopes and  good vastu suggestions of many houses apartments and business shops and complexes and showrooms. <br>1996 సం.నుండి భవిష్య వాణి, జ్యోతిషం,వాస్తు దర్శిని వంటి మ్యాగజైన్ లలో ఎన్నో జ్యోతిష వ్యాసాలు,సీరియల్స్ వ్రాసి ఉన్నారు.<br>ఉత్తమ జ్యోతిష శాస్త్రవేత్త గా ప్రశంసా పత్రం పొంది ఉన్నారు.వేల జాతకములు వ్రాసిన అనుభవం గలవారు.<br>
-                1)రాబోవు 10సం Rs.1200.<br> 
-                2)రాబోవు 20సం Rs.2500<br>
-                3)రాబోవు 30సం Rs.3500<br>
-                4)రాబోవు 40సం Rs.4500<br>
-                5)రాబోవు 50సం Rs.5500<br>
-                ఇలా మీకు కావలసిన వరకూ మీ భవిష్యత్ వ్రాయబడును.చదువు, ఉద్యోగం,వివాహం, సంతానం,ధనం,స్థిరాస్తులు,గృహం, వాహనం,లీగల్ విషయాలు, భార్యా భర్తల సమస్యలు,ఆరోగ్య విషయాలు మొదలగు వాటికి సంప్రదించవచ్చును Ph - 9290523602</p>
-        </div>
-    </section>
-    <article>
-        <div class="body-right">
-            <img class="body-img" src="https://wallpaperaccess.com/download/surya-dev-7793345" alt="">
-        </div>
-    </article>
+
+  <header class="navbar">
+    <div class="navbar-left">
+      <img class="logo" src="https://i.ibb.co/4prLbTD/channels4-profile.jpg" alt="Logo">
+      <h1>Aditya Vastu Jyothishalayam</h1>
     </div>
+    <div class="navbar-right">
+      <a class="a" href="1.html">Home</a>
+      <a class="a" href="2.html">Contact Us</a>
+      <a class="a" href="https://www.youtube.com/@adityateluguastrology">YouTube</a>
+    </div>
+  </header>
 
-</main>
-<footer>
-    <pre>
+  <main class="main">
+    <section class="body-left">
+      <p class="body-text">
+        30 years experience in astrology, vastu and all muhurtas. Research of thousands horoscopes and good vastu suggestions of many houses, apartments, business shops, complexes and showrooms.<br><br>
+        1996 సం.నుండి భవిష్య వాణి, జ్యోతిషం, వాస్తు దర్శిని వంటి మ్యాగజైన్ లలో ఎన్నో వ్యాసాలు వ్రాసారు.<br>
+        ఉత్తమ జ్యోతిష శాస్త్రవేత్తగా ప్రశంసా పత్రం పొంది ఉన్నారు. వేల జాతకములు వ్రాసిన అనుభవం.<br><br>
+        1) రాబోవు 10సం ₹1200<br>
+        2) రాబోవు 20సం ₹2500<br>
+        3) రాబోవు 30సం ₹3500<br>
+        4) రాబోవు 40సం ₹4500<br>
+        5) రాబోవు 50సం ₹5500<br><br>
+        విద్య, ఉద్యోగం, వివాహం, సంతానం, ధనం, స్థిరాస్తులు, వాహనం, ఆరోగ్యం, లీగల్ సమస్యలు: Ph - 9290523602
+      </p>
+    </section>
 
-        
-        copyrighted to &copy adityateluguastrology<br>
+    <aside class="body-right">
+      <img class="body-img" src="https://wallpaperaccess.com/download/surya-dev-7793345" alt="Surya Dev">
+    </aside>
+  </main>
 
-        created by jayachandra
-    </pre>
-</footer>
+  <footer>
+    <p>© Aditya Telugu Astrology | Created by Jayachandra</p>
+  </footer>
+
 </body>
 </html>
