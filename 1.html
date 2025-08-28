@@ -7,60 +7,7 @@
   <link rel="icon" type="image/png" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  // Highlight the active page in navbar
-  const links = document.querySelectorAll('.a');
-  const currentPage = window.location.href;
 
-  links.forEach(link => {
-    if (currentPage.includes(link.getAttribute('href'))) {
-      link.style.color = 'crimson';
-      link.style.borderBottom = '2px solid crimson';
-    }
-  });
-
-  // Scroll to top button logic
-  const scrollBtn = document.createElement('button');
-  scrollBtn.textContent = '↑ Top';
-  scrollBtn.style.position = 'fixed';
-  scrollBtn.style.bottom = '20px';
-  scrollBtn.style.right = '20px';
-  scrollBtn.style.padding = '10px 15px';
-  scrollBtn.style.borderRadius = '50%';
-  scrollBtn.style.border = 'none';
-  scrollBtn.style.backgroundColor = 'crimson';
-  scrollBtn.style.color = 'white';
-  scrollBtn.style.cursor = 'pointer';
-  scrollBtn.style.display = 'none';
-  scrollBtn.style.zIndex = '1000';
-  document.body.appendChild(scrollBtn);
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      scrollBtn.style.display = 'block';
-    } else {
-      scrollBtn.style.display = 'none';
-    }
-  });
-
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Click to copy phone number
-  const phone = document.querySelector('p strong');
-  if (phone) {
-    phone.style.cursor = 'pointer';
-    phone.setAttribute('title', 'Click to copy');
-
-    phone.addEventListener('click', () => {
-      const number = phone.innerText.replace(/[^\d+]/g, '');
-      navigator.clipboard.writeText(number).then(() => {
-        alert("Phone number copied: " + number);
-      });
-    });
-  }
-</script>
 <body>
 
   <header class="navbar">
@@ -101,3 +48,4 @@
 
 </body>
 </html>
+
